@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router';
 
+import Spinner from '../components/Spinner';
 import * as actions from '../actions/LoginActions';
 import './Login.css';
 
@@ -34,10 +35,11 @@ class Login extends Component {
         <label htmlFor="inputPassword" className="sr-only">Password</label>
         <input type="password" id="inputPassword" className="form-control" placeholder="Password" ref={input => this._password = input} required />
         <div className="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me" /> Remember me
-          </label>
-          <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={this.handleSubmit.bind(this)}>Sign in</button>
+          <button className="btn btn-lg btn-primary btn-block" type="submit"
+             onClick={this.handleSubmit.bind(this)} disabled={this.props.waitingAuth}>
+             {this.props.waitingAuth && <Spinner />}
+            {!this.props.waitingAuth && "Sign in"}
+          </button>
         </div>
     
       </form>
