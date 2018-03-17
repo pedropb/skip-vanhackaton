@@ -1,0 +1,497 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "vanhack-saopaulo-fair-api",
+        "description": "REACT and MOBILE Developers: use this API to access the end-points during your Challenge.\nJAVA Developers: this API must be implemented at least as is.",
+        "contact": {
+            "name": "Vanhack",
+            "url": "http://www.vanhack.com"
+        }
+    },
+    "paths": {
+        "/api/v1/Cousine": {
+            "get": {
+                "tags": [
+                    "Cousine"
+                ],
+                "operationId": "ApiV1CousineGet",
+                "consumes": [],
+                "produces": [],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/Cousine/search/{searchText}": {
+            "get": {
+                "tags": [
+                    "Cousine"
+                ],
+                "operationId": "ApiV1CousineSearchBySearchTextGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "searchText",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/Cousine/{cousineId}/stores": {
+            "get": {
+                "tags": [
+                    "Cousine"
+                ],
+                "operationId": "ApiV1CousineByCousineIdStoresGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "cousineId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/Customer/auth": {
+            "post": {
+                "tags": [
+                    "Customer"
+                ],
+                "operationId": "ApiV1CustomerAuthPost",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/Customer": {
+            "post": {
+                "tags": [
+                    "Customer"
+                ],
+                "operationId": "ApiV1CustomerPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "customer",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Customer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/Order/{orderId}": {
+            "get": {
+                "tags": [
+                    "Order"
+                ],
+                "operationId": "ApiV1OrderByOrderIdGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "orderId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/Order": {
+            "post": {
+                "tags": [
+                    "Order"
+                ],
+                "operationId": "ApiV1OrderPost",
+                "consumes": [
+                    "application/json-patch+json",
+                    "application/json",
+                    "text/json",
+                    "application/*+json"
+                ],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "order",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Order"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/Order/customer": {
+            "get": {
+                "tags": [
+                    "Order"
+                ],
+                "operationId": "ApiV1OrderCustomerGet",
+                "consumes": [],
+                "produces": [],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/Product": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "operationId": "ApiV1ProductGet",
+                "consumes": [],
+                "produces": [],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/Product/search/{searchText}": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "operationId": "ApiV1ProductSearchBySearchTextGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "searchText",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/Product/{productId}": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "operationId": "ApiV1ProductByProductIdGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "productId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/Store": {
+            "get": {
+                "tags": [
+                    "Store"
+                ],
+                "operationId": "ApiV1StoreGet",
+                "consumes": [],
+                "produces": [],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/Store/search/{searchText}": {
+            "get": {
+                "tags": [
+                    "Store"
+                ],
+                "operationId": "ApiV1StoreSearchBySearchTextGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "searchText",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/Store/{storeId}": {
+            "get": {
+                "tags": [
+                    "Store"
+                ],
+                "operationId": "ApiV1StoreByStoreIdGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "storeId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/v1/Store/{storeId}/products": {
+            "get": {
+                "tags": [
+                    "Store"
+                ],
+                "operationId": "ApiV1StoreByStoreIdProductsGet",
+                "consumes": [],
+                "produces": [],
+                "parameters": [
+                    {
+                        "name": "storeId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Customer": {
+            "required": [
+                "email",
+                "name",
+                "address",
+                "password"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "address": {
+                    "type": "string"
+                },
+                "creation": {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "Order": {
+            "required": [
+                "deliveryAddress",
+                "contact",
+                "storeId",
+                "orderItems",
+                "status"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "date": {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "customerId": {
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "deliveryAddress": {
+                    "type": "string"
+                },
+                "contact": {
+                    "type": "string"
+                },
+                "storeId": {
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "orderItems": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OrderItem"
+                    }
+                },
+                "total": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "lastUpdate": {
+                    "format": "date-time",
+                    "type": "string"
+                }
+            }
+        },
+        "OrderItem": {
+            "required": [
+                "orderId",
+                "productId",
+                "price",
+                "quantity"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "orderId": {
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "productId": {
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "product": {
+                    "$ref": "#/definitions/Product"
+                },
+                "price": {
+                    "format": "double",
+                    "type": "number"
+                },
+                "quantity": {
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "total": {
+                    "format": "double",
+                    "type": "number"
+                }
+            }
+        },
+        "Product": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "storeId": {
+                    "format": "int64",
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "price": {
+                    "format": "double",
+                    "type": "number"
+                }
+            }
+        }
+    }
+}
