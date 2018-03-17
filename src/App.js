@@ -6,7 +6,6 @@ import reduxThunk from 'redux-thunk';
 
 import reducers from './reducers';
 
-import Home from './components/Home';
 import Login from './containers/Login';
 import Cart from './components/Cart';
 import StoreList from './components/StoreList';
