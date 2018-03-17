@@ -12,7 +12,7 @@ class ProductList extends Component {
 
   renderProductCard(product) {
     return (
-      <div className="col-md-4">
+      <div className="col-md-4" key={product.id}>
         <div className="card mb-4 box-shadow">
           <img className="card-img-top" alt="Thumbnail [100%x225]" src={`http://lorempixel.com/280/225/food/${product.id}`} data-holder-rendered="true" />
           <div className="card-body">
@@ -20,8 +20,7 @@ class ProductList extends Component {
             <p className="card-text">{product.description}</p>
             <div className="d-flex justify-content-between align-items-center">
               <div className="btn-group">
-                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
+                <button type="button" className="btn btn-sm btn-outline-secondary">Add to cart</button>
               </div>
               <small className="text-muted">$ {this.formatPrice(product.price)}</small>
             </div>

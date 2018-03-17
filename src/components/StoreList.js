@@ -7,7 +7,7 @@ import couisines from '../data/Cousine';
 class StoreList extends Component {
   renderStoreCard(store) {
     return (
-      <div className="col-md-4">
+      <div className="col-md-4" key={store.id}>
         <div className="card mb-4 box-shadow">
           <img className="card-img-top" alt="Thumbnail [100%x225]" src="http://via.placeholder.com/280x225" data-holder-rendered="true" />
           <div className="card-body">
