@@ -6,6 +6,7 @@ import reduxThunk from 'redux-thunk';
 
 import reducers from './reducers';
 
+import Navbar from './components/Navbar';
 import Login from './containers/Login';
 import Cart from './components/Cart';
 import StoreList from './components/StoreList';
@@ -22,35 +23,7 @@ class App extends Component {
       <Provider store={applyMiddleware(reduxThunk)(createStore)(reducers)}>
         <Router>
           <div className="container">
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-              <li>
-                <Link to="/cart">Cart</Link>
-              </li>
-              <li>
-                <Link to="/stores">StoreList</Link>
-              </li>
-              <li>
-                <Link to="/store/1">Store</Link>
-              </li>
-              <li>
-                <Link to="/products/1">ProductList from store 1</Link>
-              </li>
-              <li>
-                <Link to="/product/1">Product</Link>
-              </li>
-              <li>
-                <Link to="/orders">OrderList</Link>
-              </li>
-              <li>
-                <Link to="/order/1">Order</Link>
-              </li>
-            </ul>
+            <Navbar />
 
             <hr />
             <Route exact path="/" component={Login} />
