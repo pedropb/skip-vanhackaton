@@ -1,30 +1,23 @@
 export default [
     {
-        "id": 0,
-        "date": "2018-03-17T14:36:55.489Z",
-        "customerId": 0,
-        "deliveryAddress": "string",
-        "contact": "string",
-        "storeId": 0,
+        "deliveryAddress": "123 Some Street ",
+        "contact": "123-123-9435",
+        "storeId": 1,
         "orderItems": [
             {
-                "id": 0,
-                "orderId": 0,
-                "productId": 0,
-                "product": {
-                    "id": 0,
-                    "storeId": 0,
-                    "name": "string",
-                    "description": "string",
-                    "price": 0
-                },
-                "price": 0,
-                "quantity": 0,
-                "total": 0
+                "productId": 1,
+                "quantity": 2
+            },
+            {
+                "productId": 2,
+                "quantity": 1
+            },
+            {
+                "productId": 3,
+                "quantity": 1
             }
         ],
-        "total": 0,
-        "status": "string",
-        "lastUpdate": "2018-03-17T14:36:55.489Z"
+        "total": 15,
+        "status": "Delivered"
     }
 ];
