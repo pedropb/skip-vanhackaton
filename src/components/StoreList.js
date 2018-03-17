@@ -1,7 +1,7 @@
 import React from 'react';
-import './ProductList.css';
+import './StoreList.css';
 
-const ProductList = () => (
+const StoreList = () => (
     <div class="album py-5">
         <div class="container">
 
@@ -148,4 +148,4 @@ const ProductList = () => (
       </div>
 );
 
-export default ProductList;
+export default StoreList;

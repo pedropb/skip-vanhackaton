@@ -3,10 +3,13 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import Login from './components/Login';
 import Cart from './components/Cart';
+import StoreList from './components/StoreList';
+import Store from './components/Store';
 import ProductList from './components/ProductList';
 import Product from './components/Product';
 import OrderList from './components/OrderList';
 import Order from './components/Order';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -23,6 +26,24 @@ class App extends Component {
             <li>
               <Link to="/cart">Cart</Link>
             </li>
+            <li>
+              <Link to="/stores">StoreList</Link>
+            </li>
+            <li>
+              <Link to="/store/1">Store</Link>
+            </li>
+            <li>
+              <Link to="/products">ProductList</Link>
+            </li>
+            <li>
+              <Link to="/product/1">Product</Link>
+            </li>
+            <li>
+              <Link to="/orders">OrderList</Link>
+            </li>
+            <li>
+              <Link to="/order/1">Order</Link>
+            </li>
           </ul>
 
           <hr />
@@ -31,8 +52,12 @@ class App extends Component {
           <Route path="/cart" component={Cart} />
           <Route path="/products" component={ProductList} />
           <Route path="/product/:productId" component={Product} />
+          <Route path="/stores" component={StoreList} />
+          <Route path="/store/:storeId" component={Store} />
           <Route path="/orders" component={OrderList} />
           <Route path="/order/:orderId" component={Order} />
+
+          <Footer />
         </div>
       </Router>
 

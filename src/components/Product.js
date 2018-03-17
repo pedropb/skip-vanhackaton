@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Product = () => <div>Product</div>;
+const Product = ({ match }) => <div>Product {match.params.productId}</div>;
 
 export default Product;
