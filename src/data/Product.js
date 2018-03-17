@@ -1,5 +1,4 @@
-export default
-[
+const productsData = [
     {
         "id": 1,
         "storeId": 1,
@@ -253,3 +252,9 @@ export default
         "price": 5.75
     }
 ];
+
+export function getProductsByStoreId(storeId) {
+    return productsData.filter(product => product.storeId.toString() === storeId);
+};
+
+export default productsData;
