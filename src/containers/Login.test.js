@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import Login from './Login';
@@ -23,3 +23,4 @@ it('has a password field', () => {
     const wrapper = shallow(<Login />);
     expect(wrapper.find('Password')).toBeTruthy();
 });
+
