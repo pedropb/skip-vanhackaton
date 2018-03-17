@@ -33,7 +33,7 @@ class App extends Component {
               <Link to="/store/1">Store</Link>
             </li>
             <li>
-              <Link to="/products">ProductList</Link>
+              <Link to="/products/1">ProductList from store 1</Link>
             </li>
             <li>
               <Link to="/product/1">Product</Link>
@@ -50,7 +50,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/cart" component={Cart} />
-          <Route path="/products" component={ProductList} />
+          <Route path="/products/:storeId" component={ProductList} />
           <Route path="/product/:productId" component={Product} />
           <Route path="/stores" component={StoreList} />
           <Route path="/store/:storeId" component={Store} />
