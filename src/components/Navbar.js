@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => (
     <div>
-        Feature status (this will be removed in production, it's here just to make it easy to explore all routes)
+        Route status (this will be removed in production, it's here just to make it easy to explore all routes)
     <ul>
             <li>
                 <Link to="/">/</Link>
             </li>
             <li>
                 <Link to="/login">/login (Done)</Link>
+            </li>
+            <li>
+                <Link to="/logout">/logout (Not implemented)</Link>
             </li>
             <li>
                 <Link to="/cart">/cart (static content)</Link>
