@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './StoreList.css';
-import stores from '../data/Stores';
+import { connect } from 'react-redux';
+
 import couisines from '../data/Cousine';
+import './StoreList.css';
+import * as actions from '../actions/StoreActions';
 
 class StoreList extends Component {
+  componentWillMount() {
+    this.props.loadStores();
+  }
+
   renderStoreCard(store) {
     return (
       <div className="col-md-4" key={store.id}>
@@ -33,7 +39,7 @@ class StoreList extends Component {
       <div className="album py-5">
         <div className="container">
           <div className="row">
-            {stores.map(store => this.renderStoreCard(store))}
+            {this.props.stores.map(store => this.renderStoreCard(store))}
           </div>
         </div>
       </div>
@@ -41,5 +47,13 @@ class StoreList extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  const { storesLoadingError, storesLoaded, stores } = state.stores;
+  return { 
+    storesLoadingError,
+    storesLoaded,
+    stores
+  };
+}
 
-export default StoreList;
+export default connect(mapStateToProps, actions)(StoreList);

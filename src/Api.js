@@ -9,7 +9,9 @@ const getResponseData = response => response.data;
 const Api = {
     signIn: (login, password) => 
         endpoint.post(`/Customer/auth?email=${login}&password=${password}`)
-            .then(getResponseData)
+            .then(getResponseData),
+    loadStores: () =>
+        endpoint.get(`/Store`).then(getResponseData)
 }
 
 export default Api;

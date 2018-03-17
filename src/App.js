@@ -9,7 +9,7 @@ import reducers from './reducers';
 import Navbar from './components/Navbar';
 import Login from './containers/Login';
 import Cart from './components/Cart';
-import StoreList from './components/StoreList';
+import StoreList from './containers/StoreList';
 import Store from './components/Store';
 import ProductList from './components/ProductList';
 import Product from './components/Product';
