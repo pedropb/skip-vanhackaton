@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => (
     <div>
-        Feature status (this will be removed in production)
+        Feature status (this will be removed in production, it's here just to make it easy to explore all routes)
     <ul>
             <li>
                 <Link to="/">/</Link>
@@ -15,7 +15,7 @@ const Navbar = () => (
                 <Link to="/cart">/cart (static content)</Link>
             </li>
             <li>
-                <Link to="/stores">/stores (WIP)</Link>
+                <Link to="/stores">/stores (Done)</Link>
             </li>
             <li>
                 <Link to="/store/1">/store/:storeId (not implemented)</Link>

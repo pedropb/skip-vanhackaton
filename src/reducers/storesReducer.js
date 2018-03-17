@@ -15,9 +15,9 @@ export default function (state = INITIAL_STATE, action) {
         case LOADING_STORES:
             return { ...state, storesLoadingError: '', storesLoaded: false, stores: [] };
         case LOADING_STORES_ERROR:
-            return { ...state, storesLoadingError: action.payload, storesLoaded: true, stores: [] };
+            return { ...state, storesLoadingError: action.payload, storesLoaded: false, stores: [] };
         case STORES_LOADED:
-            return { ...state, storesLoadingError: '', storesLoaded: false, stores: action.payload };
+            return { ...state, storesLoadingError: '', storesLoaded: true, stores: action.payload };
         default:
             return state;
     }

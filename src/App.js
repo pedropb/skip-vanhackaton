@@ -20,7 +20,8 @@ import Footer from './components/Footer';
 class App extends Component {
   render() {
     return (
-      <Provider store={applyMiddleware(reduxThunk)(createStore)(reducers)}>
+      <Provider store={applyMiddleware(reduxThunk)(createStore)(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+      )}>
         <Router>
           <div className="container">
             <Navbar />
