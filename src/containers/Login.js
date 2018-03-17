@@ -29,9 +29,6 @@ class Login extends Component {
         { this.props.authenticated && (
           <Redirect to="/stores" />
         )}
-        Error Message: { this.props.authError || 'vazio' }<br />
-        Waiting Auth: { this.props.waitingAuth.toString() }<br />
-        Authenticated: { this.props.authenticated.toString() }
         <label htmlFor="inputEmail" className="sr-only">Email address</label>
         <input type="email" id="inputEmail" className="form-control" placeholder="Email address" ref={input => this._email = input} required autoFocus />
         <label htmlFor="inputPassword" className="sr-only">Password</label>
