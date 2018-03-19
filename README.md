@@ -1,4 +1,6 @@
-# Book list React Demo
+### Disclaimer: checkout tag "hackathon-project" to see everything that was delivered within the time constraint of the Hackathon. I'll be continuing this project over the next days.
+
+# VanHackathon 2018
 
 This was my project for SkipTheDishes and VanHack during the Recruiting Fair in 2018.
 
@@ -33,3 +35,4 @@ The final product was:
 - `yarn install`
 - `yarn start`
 - browse to [http://localhost:3000](http://localhost:3000)
+- use email: `test@skip.com` password: `test` to login
