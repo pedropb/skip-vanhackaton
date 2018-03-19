@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import './StoreList.css';
-import stores from '../data/Stores';
-import couisines from '../data/Cousine';
+import Spinner from '../components/Spinner';
+import { loadStores } from '../actions/StoreActions';
+import { loadCousines } from '../actions/CousineActions';
 
 class StoreList extends Component {
+  componentWillMount() {
+    this.props.loadStores();
+    this.props.loadCousines();
+  }
+
+  isLoading() {
+    return !this.props.storesLoaded || !this.props.cousinesLoaded;
+  }
+
   renderStoreCard(store) {
     return (
       <div className="col-md-4" key={store.id}>
@@ -20,7 +32,7 @@ class StoreList extends Component {
                 </Link>
               </div>
               {/* TODO: refactor following filter to an Api function getCousineById() */}
-              <small className="text-muted">{couisines.filter(({ id }) => id === store.cousineId)[0].name}</small>
+              <small className="text-muted">{this.props.cousines.filter(({ id }) => id === store.cousineId)[0].name}</small>
             </div>
           </div>
         </div>
@@ -33,7 +45,8 @@ class StoreList extends Component {
       <div className="album py-5">
         <div className="container">
           <div className="row">
-            {stores.map(store => this.renderStoreCard(store))}
+            {this.isLoading() && (<Spinner />)}
+            {!this.isLoading() && this.props.stores.map(store => this.renderStoreCard(store))}
           </div>
         </div>
       </div>
@@ -41,5 +54,18 @@ class StoreList extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  const { cousinesLoadingError, cousinesLoaded, cousines } = state.cousines;
+  const { storesLoadingError, storesLoaded, stores } = state.stores;
 
-export default StoreList;
+  return {
+    storesLoadingError,
+    storesLoaded,
+    stores,
+    cousinesLoadingError,
+    cousinesLoaded,
+    cousines
+  };
+}
+
+export default connect(mapStateToProps, {loadStores, loadCousines})(StoreList);

@@ -4,7 +4,7 @@ import {
     AUTH_ERROR
 } from '../actions/types';
 
-export const INITIAL_STATE = {
+const INITIAL_STATE = {
     authError: '',
     authenticated: false,
     waitingAuth: false

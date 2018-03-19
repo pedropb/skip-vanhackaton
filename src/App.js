@@ -9,7 +9,7 @@ import reducers from './reducers';
 import Navbar from './components/Navbar';
 import Login from './containers/Login';
 import Cart from './components/Cart';
-import StoreList from './components/StoreList';
+import StoreList from './containers/StoreList';
 import Store from './components/Store';
 import ProductList from './components/ProductList';
 import Product from './components/Product';
@@ -20,7 +20,8 @@ import Footer from './components/Footer';
 class App extends Component {
   render() {
     return (
-      <Provider store={applyMiddleware(reduxThunk)(createStore)(reducers)}>
+      <Provider store={applyMiddleware(reduxThunk)(createStore)(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+      )}>
         <Router>
           <div className="container">
             <Navbar />
