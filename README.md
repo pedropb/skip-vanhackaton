@@ -7,9 +7,9 @@ This was my project for SkipTheDishes and VanHack during the Recruiting Fair in 
 This project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app).
 I used [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/), [React](https://reactjs.org/), [Redux](https://github.com/reactjs/redux), [Redux Thunk](https://github.com/gaearon/redux-thunk), [Axios](https://github.com/axios/axios) and [Enzyme](https://github.com/airbnb/enzyme), to try to showcase my knowledge of the React ecossystem.
 
-The API provided by VanHack for this challenge can be seen [here](https://docs.google.com/presentation/d/1Ck3eY_kEWpOrNfFzFVxNsOnb9g9pNXgJ1pv_25lDvjE/edit#slide=id.g32e807dfa2_0_17)
+The API provided by VanHack for this challenge can be seen [here](http://api-vanhack-event-sp.azurewebsites.net/swagger/).
 
-The challenge description can be seen [here](http://api-vanhack-event-sp.azurewebsites.net/swagger/).
+The challenge description can be seen [here](https://docs.google.com/presentation/d/1Ck3eY_kEWpOrNfFzFVxNsOnb9g9pNXgJ1pv_25lDvjE/edit#slide=id.g32e807dfa2_0_17)
 
 ## How I implemented it
 
