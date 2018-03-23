@@ -1,4 +1,4 @@
-### Disclaimer: checkout tag "hackathon-project" to see everything that was delivered within the time constraint of the Hackathon. I'll be continuing this project over the next days.
+### Disclaimer: checkout tag "hackathon-project" (or [click here](https://github.com/pedropb/skip-vanhackaton/tree/3fd61e5f4d9cde9e1fa20a5187442544a74e38d5)) to see everything that was coded during the Hackathon. I'll be continuing this project over the next days.
 
 # VanHackathon 2018
 
