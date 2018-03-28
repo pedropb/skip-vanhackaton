@@ -1,4 +1,4 @@
-### Disclaimer: checkout tag "hackathon-project" (or [click here](https://github.com/pedropb/skip-vanhackaton/tree/3fd61e5f4d9cde9e1fa20a5187442544a74e38d5)) to see everything that was coded during the Hackathon. I'll be continuing this project over the next days.
+### Disclaimer: checkout tag "hackathon-project" (or [click here](https://github.com/pedropb/skip-vanhackaton/tree/3fd61e5f4d9cde9e1fa20a5187442544a74e38d5)) to see everything that was delivered within the time constraint of the Hackathon.
 
 # VanHackathon 2018
 
@@ -19,13 +19,14 @@ While building the static version of the site, I encountered some challenges usi
 1. There was no documentation available on the Response-body of the API. This led me to use POSTMAN to check every service and retrieve their structure.
 2. Customer and Order services were restricted and also empty. We were expected to populate them with POST requests, before we could retrieve them.
 
-This made me change course and I started implementing behaviour and creating [Containers](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0). I started with [Login](src/containers/Login.js) and then moved on to Stores. I also implemented very basic unit testing on Login, to showcase my knowledge on this topic.
+This made me change course, because I thought that the time cost of populating a dummy database using POSTMAN would be too high for the hackathon. So I decided to skip wiring the prototype with dummy data, and moved on to implementing behaviour on the static components and promoting some of them to [Containers](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0). I started with [Login](src/containers/Login.js) and then moved on to Stores. I also implemented very basic unit testing on Login, to showcase my knowledge on this topic.
 
 The final product was:
 - Login: implemented
 - Stores: implemented
 - Logout, store, and order: not implemented
 - Cart and products: static content
+- Sign up and forgot password: not implemented.
 
 
 ## How to run
