@@ -7,7 +7,7 @@ import Spinner from '../components/Spinner';
 import { loadStores } from '../actions/StoreActions';
 import { loadCousines } from '../actions/CousineActions';
 
-class StoreList extends Component {
+export class StoreList extends Component {
   componentWillMount() {
     this.props.loadStores();
     this.props.loadCousines();

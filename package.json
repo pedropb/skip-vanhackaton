@@ -1,5 +1,12 @@
 {
   "name": "skip-vanhackathon",
+  "jest": {
+    "collectCoverageFrom" : [
+      "src/**/*.js",
+      "!src/registerServiceWorker.js",
+      "!<rootDir>/node_modules/"
+    ]
+  },
   "homepage": "https://pedropb.github.io/skip-vanhackaton/",
   "version": "0.1.0",
   "private": true,
@@ -23,6 +30,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "test:cov": "react-scripts test --coverage --env=jsdom && codecov",
+    "coverage": "react-scripts test --coverage --env=jsdom",
     "eject": "react-scripts eject"
   }
 }
