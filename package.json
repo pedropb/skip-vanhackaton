@@ -1,5 +1,9 @@
 {
   "name": "skip-vanhackathon",
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +16,7 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "codecov": "^3.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "react-scripts": "1.1.1"
@@ -20,6 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test:cov": "react-scripts test --coverage --env=jsdom && codecov",
     "eject": "react-scripts eject"
   }
 }
