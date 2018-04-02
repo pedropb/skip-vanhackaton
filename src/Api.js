@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const endpoint = axios.create({
-    baseURL: "http://api-vanhack-event-sp.azurewebsites.net/api/v1"
+    baseURL: "https://api-vanhack-event-sp.azurewebsites.net/api/v1"
 });
 
 const getResponseData = response => response.data;
