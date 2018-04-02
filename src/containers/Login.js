@@ -6,7 +6,7 @@ import Spinner from '../components/Spinner';
 import * as actions from '../actions/LoginActions';
 import './Login.css';
 
-class Login extends Component {
+export class Login extends Component {
   // validation is being done by Bootstrap and HTML DOM
   handleSubmit(event) {
     if (this._email.checkValidity() && this._password.checkValidity()) {
