@@ -1,5 +1,6 @@
 {
   "name": "skip-vanhackathon",
+  "homepage": "https://pedropb.github.io/skip-vanhackaton/",
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
