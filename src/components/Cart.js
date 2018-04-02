@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Cart.css';
 import OrderItemsList from './OrderItemsList';
-import order from '../data/Order.js';
 
 class Cart extends Component {
   render() {
