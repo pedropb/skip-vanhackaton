@@ -16,7 +16,7 @@ it("has a loadStores service", () => {
   expect.assertions(1);
   axios.__response = { data: ["Store1", "Store2"] };
   return api
-    .signIn("user", "password")
+    .loadStores("user", "password")
     .then(data => expect(data).toEqual(["Store1", "Store2"]));
 });
 
@@ -24,6 +24,6 @@ it("has a loadCousines service", () => {
   expect.assertions(1);
   axios.__response = { data: ["Cousine1", "Cousine2"] };
   return api
-    .signIn("user", "password")
+    .loadCousines("user", "password")
     .then(data => expect(data).toEqual(["Cousine1", "Cousine2"]));
 });
