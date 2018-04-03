@@ -4,6 +4,7 @@
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/registerServiceWorker.js",
+      "!src/index.js",
       "!<rootDir>/node_modules/"
     ]
   },
